@@ -198,6 +198,11 @@ ul.accomplishments-list, ul.goals-list {
     list-style-type: disc;
 }
 
+.mugshot-background {
+    background:url(../img/chris.jpg) no-repeat center center;
+    background-size: 50%;
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
