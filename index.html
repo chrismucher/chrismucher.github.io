@@ -193,14 +193,14 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-md-8 equal-column">
+            <div class="col-lg-8 col-md-8 about-row">
                 <h2>About Chris</h2>
                 <p>Chris was born in upstate New York, second in a family of four children. At the age of nine, his family moved to Hudson in Northeast Ohio. He lived there until attending Ohio University, where he received his Bachelors degree.</p>
                 <p> In 1980, he moved to Miami Township with his wife Cindy where they owned and operated the Tastee Freeze in Yellow Springs until 1986. From 1985 to 2006, Chris operated a second business, Movieworks/Photoworks, providing on-site film processing and video movie rentals. Chris and Cindy have three wonderful children: Christen, Stephen, and Mike.</p>
                 <p>Chris was appointed Miami Township Trustee in November 1996. He successfully ran for election in 1997 to complete the unexpired term and again ran successfully in 1999, 2003, 2007, and 2011 for four year terms as Miami Township Trustee. He currently serves as President of the Board of Trustees.
                 </p>
             </div>
-            <div class="col-lg-4 col-md-4 mugshot-background visible-md-block visible-lg-block equal-column"/>
+            <div class="col-lg-4 col-md-4 about-photo visible-md-block visible-lg-block about-row"/>
         </div>
     </section>
 
@@ -246,14 +246,18 @@
     <script src="js/grayscale.js"></script>
 
     <script>
-        $( document ).ready(function() {
-            var heights = $(".equal-column").map(function() {
+        function setElementHeightEqual(element) {
+            var heights = $(element).map(function() {
                 return $(this).height();
             }).get(),
 
             maxHeight = Math.max.apply(null, heights);
 
-            $(".equal-column").height(maxHeight);
+            $(element).height(maxHeight);
+        }
+
+        $( document ).ready(function() {
+            setElementHeightEqual(".about-row");
         });
     </script>
 
