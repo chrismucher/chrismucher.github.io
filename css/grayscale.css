@@ -190,13 +190,13 @@ a:focus {
     }
 }
 
-.accomplishments-body, .goals-body {
+.accomplishments-body, .goals-body, .experience-body {
     text-align: left;
     font-size: 20px;
     line-height: 2;
 }
 
-ul.accomplishments-list, ul.goals-list {
+ul.accomplishments-list, ul.goals-list, ul.experience-list {
     list-style-type: disc;
 }
 
